@@ -28,5 +28,7 @@ export const levenshtein = (a, b, matchCount) => {
       row[a.length] = prev;
     }
 
-    return ((row[a.length] / b.length) > matchCount) && (row[a.length] !== b.length) 
+    const percentage = (((b.length - row[a.length]) * 100) / b.length) / 100;
+    
+    return (1 - percentage) < matchCount;
   }

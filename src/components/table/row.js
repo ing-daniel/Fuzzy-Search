@@ -9,7 +9,7 @@ export const Row = styled.tr`
   }
 
   & th{
-    color: #dd5;
+    color: #f5621c;
     font-weight: bold;
   }
 `;

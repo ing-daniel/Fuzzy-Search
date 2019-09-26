@@ -8,9 +8,6 @@ export const TableTransactions = props => {
     const {
         list
     } = props;
-
-    console.log(list);
-    
     
     return (
         <Table>
@@ -26,7 +23,7 @@ export const TableTransactions = props => {
                     list.map((e, i) => {
                         return <Row key={i}>
                             <td>{formatMoney(e.amount, 2)}</td>
-                            <td>{e.date}</td>
+                            <td>{e.date.replace("T", " ")}</td>
                             <td>{e.card_last_four.padStart(12, "*")}</td>
                         </Row>
                     })
